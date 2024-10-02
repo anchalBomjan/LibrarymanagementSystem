@@ -1,4 +1,4 @@
-n this Video, I have built a Angular 17 Library Management System Website.
+I have built a Angular 17 Library Management System Website.
 This website has UI as well as backend and database was made during this video.
 
  Inital Setup
