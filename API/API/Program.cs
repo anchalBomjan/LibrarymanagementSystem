@@ -1,4 +1,5 @@
 using API.Data;
+using API.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,7 +19,7 @@ builder.Services.AddCors(o =>
               .AllowCredentials();
     });
 });
-
+builder.Services.AddScoped<EmailService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
