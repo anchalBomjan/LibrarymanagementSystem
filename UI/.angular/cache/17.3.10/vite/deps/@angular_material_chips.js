@@ -2,15 +2,15 @@ import {
   MAT_FORM_FIELD,
   MatFormField,
   MatFormFieldControl
-} from "./chunk-NDIRWRHD.js";
-import "./chunk-T53QJWTB.js";
+} from "./chunk-OZA7VPEY.js";
+import "./chunk-LFHKZXN6.js";
 import {
   FormGroupDirective,
   NG_VALUE_ACCESSOR,
   NgControl,
   NgForm,
   Validators
-} from "./chunk-IGPIZNFE.js";
+} from "./chunk-IJLFLMJ7.js";
 import {
   BACKSPACE,
   DELETE,
@@ -27,10 +27,10 @@ import {
   TAB,
   _ErrorStateTracker,
   hasModifierKey
-} from "./chunk-FJBGQR3N.js";
+} from "./chunk-NXFUPPRZ.js";
 import {
   DOCUMENT
-} from "./chunk-KTKVZWAZ.js";
+} from "./chunk-QZNCN5V7.js";
 import {
   ANIMATION_MODULE_TYPE,
   Attribute,
@@ -52,19 +52,13 @@ import {
   Output,
   QueryList,
   Self,
-  Subject,
   ViewChild,
   ViewEncapsulation$1,
   booleanAttribute,
   forwardRef,
   inject,
-  merge,
   numberAttribute,
   setClassMetadata,
-  startWith,
-  switchMap,
-  take,
-  takeUntil,
   ɵɵInheritDefinitionFeature,
   ɵɵInputTransformsFeature,
   ɵɵNgOnChangesFeature,
@@ -99,7 +93,15 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate,
   ɵɵviewQuery
-} from "./chunk-FUFBRF2F.js";
+} from "./chunk-7M57BB2M.js";
+import {
+  Subject,
+  merge,
+  startWith,
+  switchMap,
+  take,
+  takeUntil
+} from "./chunk-FRPRYHQD.js";
 
 // node_modules/@angular/material/fesm2022/chips.mjs
 var _c0 = ["*", [["mat-chip-avatar"], ["", "matChipAvatar", ""]], [["mat-chip-trailing-icon"], ["", "matChipRemove", ""], ["", "matChipTrailingIcon", ""]]];
