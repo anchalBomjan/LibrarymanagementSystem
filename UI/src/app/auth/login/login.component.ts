@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ApiService } from '../../shared/services/api.service';
 
 @Component({
   selector: 'login',
@@ -10,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class LoginComponent {
   loginForm: FormGroup;
   hidePassword: boolean = true;
-  constructor(fb: FormBuilder,private snackBar: MatSnackBar) 
+  constructor(fb: FormBuilder,private snackBar: MatSnackBar,private apiService:ApiService) 
   {
     this.loginForm = fb.group({
       email: fb.control('', [Validators.required]),
@@ -23,7 +24,22 @@ export class LoginComponent {
       email: this.loginForm.get('email')?.value,
       password: this.loginForm.get('password')?.value,
     };
-    
+    this.apiService.login(loginInfo).subscribe({
+      next:(res)=>{
+        console.log(res);
+
+        if (res == 'not found')
+          this.snackBar.open('Credential are invalid!', 'OK');
+        else if (res == 'unapproved')
+          this.snackBar.open('Your account is not Aprooved by Admin!', 'OK');
+          else if (res == 'blocked')
+          this.snackBar.open('Your account is BLOCKED. Please go to admin office to Unblock.', 'OK');
+        else {
+          localStorage.setItem('access_token', res);
+          this.apiService.userStatus.next("loggedIn");
+        }
+      }
+    })
    
   }
 

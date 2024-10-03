@@ -24,7 +24,7 @@ import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../material/material.module'; // Import the MaterialModule
 
 import { MatCardModule } from '@angular/material/card';
-import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
