@@ -191,9 +191,11 @@
           </mat-grid-tile>
       </mat-grid-list>
   </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="accent">Register</button>
-    </mat-card-actions>
+  <mat-card-actions>
+    <button mat-raised-button color="accent"
+        [disabled]="registerForm.invalid" (click)="register()">Register</button>
+  </mat-card-actions>
+  
 
     <mat-card-actions>
       <h4>Already have an account?</h4>
