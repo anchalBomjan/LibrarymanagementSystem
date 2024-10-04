@@ -20,10 +20,10 @@ export class PageSideNavComponent {
   navItems: NavigationItem[] = [];
 
   constructor(private apiService: ApiService, private router: Router) {
-    this.navItems = [
-      { value: 'view books', link: 'view-books' },
-      { value: 'My Orders', link: 'my-orders' }
-    ];
+    // this.navItems = [
+    //   { value: 'view books', link: 'view-books' },
+    //   { value: 'My Orders', link: 'my-orders' }
+    // ];
 
     apiService.userStatus.subscribe({
       next: status => {
