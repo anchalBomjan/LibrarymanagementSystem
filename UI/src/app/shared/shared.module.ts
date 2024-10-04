@@ -7,6 +7,7 @@ import { PageSideNavComponent } from './components/page-side-nav/page-side-nav.c
 import { RouterLink } from '@angular/router';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PageTableComponent } from './components/page-table/page-table.component';
 
 
 
@@ -15,10 +16,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     PageHeaderComponent,
     PageFotterComponent,
     PageSideNavComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PageTableComponent
   ],
   imports:[CommonModule,MaterialModule,RouterLink,ReactiveFormsModule],
-  exports:[CommonModule,MaterialModule,PageHeaderComponent,PageFotterComponent,PageSideNavComponent,RouterLink,ReactiveFormsModule],
+  exports:[CommonModule,MaterialModule,PageHeaderComponent,PageFotterComponent,PageSideNavComponent,RouterLink,ReactiveFormsModule,
+    PageTableComponent  // Ensure PageTableComponent is exported here
+  ],
  
   
 })

@@ -3,8 +3,11 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 
-import { provideHttpClient } from '@angular/common/http';
 import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes), 
@@ -25,6 +28,7 @@ export const appConfig: ApplicationConfig = {
     ),
 
     JwtHelperService,
+    provideHttpClient(withInterceptorsFromDi()),
 
   ]
 };

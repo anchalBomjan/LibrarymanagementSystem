@@ -23,6 +23,8 @@ export class AppComponent implements OnInit {
     let status = this.apiService.isLoggedIn() ? 'loggedIn' : 'loggedOff';
     this.apiService.userStatus.next(status); // Ensure that the 'userStatus' subject is updated correctly
   }
+
+  //  code inside ngOnInit demonistration /shows the different between  code inside the constructor and ngOnInit
   constructor(private apiService: ApiService) { 
 
   }
