@@ -1,0 +1,24 @@
+/* Form Field Styling */
+mat-form-field {
+    margin-right: 1rem;
+  
+    /* Add margin-bottom for better spacing in forms */
+    margin-bottom: 1rem;
+  }
+  
+  /* Specific Input Widths */
+  .category-select {
+    width: 400px;
+  }
+  
+  .book-title {
+    width: 500px;
+  }
+  
+  .book-author {
+    width: 300px;
+  }
+  
+  .book-price {
+    width: 100px;
+  }
