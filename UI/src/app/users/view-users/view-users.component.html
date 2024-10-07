@@ -1,1 +1,9 @@
-<p>view-users works!</p>
+<mat-card>
+    <mat-card-content>
+        <h1> All users of the library</h1>
+    </mat-card-content>
+</mat-card>
+
+
+<page-table [columns]="columns" [dataSource]="users" (unblock)="unblockUser($event)">
+</page-table>
